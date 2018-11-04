@@ -1,9 +1,11 @@
 function minimumDistances(a) {
     const arr = []
-    for (let i = 0; i < a.length; i++) {
-        let x = a.indexOf(a[i], i + 1)
+    a.forEach((el, i) => {
+        let x = a.indexOf(el, i + 1)
         i - x < 0 ? arr.push(i - x) : null
-    }
+        return arr
+
+    })
     if (arr != undefined && arr.length > 0) {
         const g = arr.map((el) => Math.abs(el)).sort((a, b) => a - b)
         return g[0]
