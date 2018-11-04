@@ -5,10 +5,10 @@ function minimumDistances(a) {
         i - x < 0 ? arr.push(i - x) : null
         return arr
     })
-    if (arr != undefined && arr.length > 0) {
-        return arr.map((el) => Math.abs(el)).sort((a, b) => a - b)[0]
-    } else {
-        return -1
-    }
+    return arr != undefined && arr.length > 0 ?
+        arr.map((el) => Math.abs(el)).sort((a, b) => a - b)[0]
+        : -1
+
+
 }
 console.log(minimumDistances([7, 1, 3, 4, 1, 7]))
