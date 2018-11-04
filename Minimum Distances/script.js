@@ -4,11 +4,9 @@ function minimumDistances(a) {
         let x = a.indexOf(el, i + 1)
         i - x < 0 ? arr.push(i - x) : null
         return arr
-
     })
     if (arr != undefined && arr.length > 0) {
-        const g = arr.map((el) => Math.abs(el)).sort((a, b) => a - b)
-        return g[0]
+        return arr.map((el) => Math.abs(el)).sort((a, b) => a - b)[0]
     } else {
         return -1
     }
